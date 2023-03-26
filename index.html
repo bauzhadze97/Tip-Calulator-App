@@ -15,10 +15,14 @@
   <div class="container">
     <div class="bill">
       <p>Bill</p>
-      <input type="number" id="bill">
+      <input type="number" id="bill"  value="5" onblur="getVal()">
+    </div>
+    <div class="tip">
+      <p>Select Tip %</p>
+      <button onclick="getTip()" value="5">5%</button>
     </div>
   </div>
 </main>
-  
+  <script src="./script.js"></script>
 </body>
 </html>
