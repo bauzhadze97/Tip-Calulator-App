@@ -3,6 +3,6 @@ function getVal() {
      console.log(val * 100);
 }
 function getTip() {
-    const tip = document.getElementById('tip').value;
+    const tip = document.getElementsByName('tip').value;
     console.log(tip);
 }

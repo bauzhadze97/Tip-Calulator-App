@@ -48,4 +48,69 @@ main .container .bill input[type=number] {
   font-size: 24px;
   color: #00474B;
   border: none;
+  padding: 16px 0;
+}
+main .container .tip p {
+  font-weight: 700;
+  font-size: 16px;
+  color: #5E7A7D;
+  margin-top: 32px;
+}
+main .container .tip div {
+  display: flex;
+  gap: 16px;
+  margin: 10px 0 10px 0;
+}
+main .container .tip div button {
+  background: #00474B;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding: 10px 50px;
+  border: none;
+  cursor: pointer;
+}
+main .container .tip div input[type=number] {
+  background: #F3F9FA;
+  border-radius: 5px;
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #547878;
+  text-align: center;
+  max-width: 140px;
+}
+main .container .numberpeople p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #5E7A7D;
+  margin-bottom: 6px;
+}
+main .container .numberpeople input[type=number] {
+  background: #F3F9FA;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  background-image: url(./images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  color: #00474B;
+  padding: 16px 0;
+}
+main .container .calculate {
+  background: #00474B;
+  border-radius: 15px;
+}
+main .container .calculate .tipamount {
+  display: flex;
+  justify-content: space-between;
+}
+main .container .calculate .totalamount {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
