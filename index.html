@@ -15,7 +15,7 @@
   <div class="container">
     <div class="bill">
       <p>Bill</p>
-      <input type="number" id="bill"  value="5" onblur="getVal()">
+      <input type="number" id="bill">
     </div>
     <div class="tip">
       <p>Select Tip %</p>
@@ -37,12 +37,12 @@
     <div class="calculate">
       <div class="tipamount">
         <h2>Tip Amount<br><span>person</span></h2>
-        <span>4$</span>
+        <span id="tipvalue">$0</span>
       </div>
       <div class="totalamount">
         <h2>      Total<br>
           <span>/ person</span></h2>
-          <span id="totalperson">10</span>
+          <span id="totalperson">$0</span>
       </div>
       <button> Reset</button>
     </div>
