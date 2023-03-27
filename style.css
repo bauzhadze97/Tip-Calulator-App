@@ -106,14 +106,61 @@ main .container .numberpeople input[type=number] {
 main .container .calculate {
   background: #00474B;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 32px 0;
+}
+main .container .calculate button {
+  color: #00474B;
+  background: #26C2AE;
+  border-radius: 5px;
+  padding: 18px 0;
+  margin: 24px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
 }
 main .container .calculate .tipamount {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 25px 22px;
+}
+main .container .calculate .tipamount span {
+  color: #26C2AE;
+  font-size: 32px;
+  font-weight: 700;
+}
+main .container .calculate .tipamount h2 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+main .container .calculate .tipamount h2 span {
+  color: #7F9D9F;
+  font-weight: 700;
+  font-size: 13px;
 }
 main .container .calculate .totalamount {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 25px 22px;
+}
+main .container .calculate .totalamount span {
+  color: #26C2AE;
+  font-size: 32px;
+  font-weight: 700;
+}
+main .container .calculate .totalamount h2 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+main .container .calculate .totalamount h2 span {
+  color: #7F9D9F;
+  font-weight: 700;
+  font-size: 13px;
 }/*# sourceMappingURL=style.css.map */

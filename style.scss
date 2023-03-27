@@ -67,7 +67,6 @@ main{
                 font-size: 24px;
                 color: #FFFFFF;
                 padding: 10px 30px;
-
                 border: none;
                 cursor: pointer;
             }
@@ -109,15 +108,62 @@ main{
         & .calculate{
             background: #00474B;
             border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 32px 0;
+            & button{
+                color: #00474B;
+                background: #26C2AE;
+                border-radius: 5px;
+                padding: 18px 0;
+                margin: 24px;
+                text-transform: uppercase;
+                font-size: 20px;
+                font-weight: 700;
+                border: none;
+            }
             & .tipamount{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 25px 22px;
+                & span{
+                    color: #26C2AE;
+                    font-size: 32px;
+                    font-weight: 700;
+                }
+                & h2{
+                    font-weight: 700;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    & span{
+                        color: #7F9D9F;
+                        font-weight: 700;
+                        font-size: 13px;
+                    }
+                }
             }
             & .totalamount{
                 display: flex;
                 justify-content: space-between;
                 align-items:center;
+                padding: 25px 22px;
+                & span{
+                    color: #26C2AE;
+                    font-size: 32px;
+                    font-weight: 700;
+                }
+                & h2{
+                    font-weight: 700;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    & span{
+                        color: #7F9D9F;
+                        font-weight: 700;
+                        font-size: 13px;
+                    }
+                }
             }
         }
     }
