@@ -57,6 +57,7 @@ main{
             }
             & div {
             display: flex;
+            justify-content: flex-start;
             gap: 16px; 
             margin: 10px 0 10px 0;
             & button{
@@ -65,7 +66,8 @@ main{
                 font-weight: 700;
                 font-size: 24px;
                 color: #FFFFFF;
-                padding: 10px 50px;
+                padding: 10px 30px;
+
                 border: none;
                 cursor: pointer;
             }
@@ -110,10 +112,12 @@ main{
             & .tipamount{
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
             }
             & .totalamount{
                 display: flex;
                 justify-content: space-between;
+                align-items:center;
             }
         }
     }
