@@ -1,19 +1,62 @@
-const bill = document.getElementById('bill').value;
-const customTip = document.getElementById('custom').value;
-const people = document.getElementById('numberpeople').value;
-const button = document.querySelectorAll('.tip button').value;
-const tipvalue = document.getElementById('tipvalue').value;
+const billAmount = document.getElementById("bill");
+const numberOfPeople = document.getElementById("people");
+const customTipPercentage = document.getElementById("custom");
+const billTipAmount = document.getElementById("tipAmount");
+const billTotalPerPerson = document.getElementById("total");
+const resetButton = document.getElementById("resetBtn");
+const buttons = document.querySelectorAll(".tip-btns button");
 
-button.forEach((button) => {
-    button.addEventlistener("click", (e) => {
-        let tipvalue = e.target.innerText;
-        tipvalue = tipvalue.substr(0, tipvalue.lenght -1);
-        if (bill.value === "") return;
-        if (people.value === "") people.value = 1;
-        calculateTip(
-            parseFloat(bill.value),
-            parseInt(tipvalue),
-            parseInt(people.value)
-        );
-    });
+//button daa jaandaba amas
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    let tipvalue = e.target.innerText;
+    tipvalue = tipvalue.substr(0, tipvalue.length - 1);
+
+    if (billAmount.value === "") return;
+    if (numberOfPeople.value === "") numberOfPeople.value = 1;
+
+    calculateTip(
+      parseFloat(billAmount.value),
+      parseInt(tipvalue),
+      parseInt(numberOfPeople.value)
+    );
+  });
 });
+
+//es inputistvis 
+customTipPercentage.addEventListener("blur", (e) => {
+  if (billAmount.value === "") {
+    resetEverything();
+    return;
+  }
+  if (numberOfPeople.value === "") numberOfPeople.value = 1;
+
+  calculateTip(
+    parseFloat(billAmount.value),
+    parseFloat(e.target.value),
+    parseInt(numberOfPeople.value)
+  );
+});
+
+// calculacias vaketeb tipis
+function calculateTip(billAmount, tipPercentage, numberOfPeople) {
+  let tipAmount = (billAmount * (tipPercentage / 100)) / numberOfPeople;
+  let tip = Math.floor(tipAmount * 100) / 100;
+  tip = tip.toFixed(2);
+
+  let totalAmount = (tipAmount * numberOfPeople + billAmount) / numberOfPeople;
+  totalAmount = totalAmount.toFixed(2);
+
+  billTipAmount.innerHTML = `$${tip}`;
+  billTotalPerPerson.innerHTML = `$${totalAmount}`;
+}
+
+//resetis gilakia
+resetButton.addEventListener("click", resetEverything);
+function resetEverything() {
+  billTipAmount.innerHTML = "$0.00";
+  billTotalPerPerson.innerHTML = "$0.00";
+  billAmount.value = "";
+  numberOfPeople.value = "";
+  customTipPercentage.value = "";
+}
