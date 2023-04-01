@@ -40,6 +40,12 @@ customTipPercentage.addEventListener("blur", (e) => {
 
 // calculacias vaketeb tipis
 function calculateTip(billAmount, tipPercentage, numberOfPeople) {
+  if (billAmount <= 0) {
+    billTipAmount.innerHTML = "$0.00";
+    billTotalPerPerson.innerHTML = "$0.00";
+    return;
+  }
+
   let tipAmount = (billAmount * (tipPercentage / 100)) / numberOfPeople;
   let tip = Math.floor(tipAmount * 100) / 100;
   tip = tip.toFixed(2);
