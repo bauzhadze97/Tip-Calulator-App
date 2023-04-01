@@ -31,12 +31,20 @@ customTipPercentage.addEventListener("blur", (e) => {
   }
   if (numberOfPeople.value === "") numberOfPeople.value = 1;
 
+  let customTipValue = parseFloat(e.target.value);
+
+  if (customTipValue > 100) {
+    e.target.value = "100";
+    customTipValue = 100;
+  }
+
   calculateTip(
     parseFloat(billAmount.value),
-    parseFloat(e.target.value),
+    customTipValue,
     parseInt(numberOfPeople.value)
   );
 });
+
 
 // calculacias vaketeb tipis
 function calculateTip(billAmount, tipPercentage, numberOfPeople) {
